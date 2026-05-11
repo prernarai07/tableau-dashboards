@@ -1,15 +1,15 @@
-# 🌍 Data Governance & ESG Dashboard — Tableau
+# 💰 Financial Performance Dashboard — Tableau
 
-![Data Governance & ESG Dashboard](./dashboard-preview.png)
+![Financial Performance Dashboard](./dashboard-preview.png)
 
-An interactive Tableau dashboard tracking Environmental, Social, and Governance (ESG) metrics across countries over time, blending ESG scoring data with HR workforce data for a comprehensive sustainability and governance view.
+An interactive Tableau dashboard analysing sales, profitability, and discount impact across 5 countries and 6 product lines using financial transaction data.
 
 ---
 
 ## Dashboard Overview
 
-**File:** `Data_Governance_ESG_Dashboard_Prerna-Rai.twb`  
-**Data Sources:** `ESGData_Tableau.csv` + `HRDataset_v14.csv` (blended)  
+**File:** `Unified_Financial_project1_.twb`  
+**Data Source:** `financial_data_clean.csv`  
 **Tool:** Tableau Desktop 2026.1
 
 ---
@@ -18,50 +18,62 @@ An interactive Tableau dashboard tracking Environmental, Social, and Governance 
 
 | Sheet | Type | Purpose |
 |---|---|---|
-| KPI – Summary Table | Table / KPI | High-level ESG score summary by category |
-| Map – ESG by Country | Map | Geographic distribution of ESG scores |
-| Bar – Country Comparison | Bar Chart | Side-by-side ESG performance by country |
-| Line – Trend Over Time | Line Chart | ESG score trends across reporting periods |
-| **Dashboard 1** | **Dashboard** | **Combined interactive ESG overview** |
+| KPI – Total Sales | KPI Card | Headline net sales figure |
+| KPI – Gross Sales | KPI Card | Gross revenue before discounts |
+| KPI – COGS | KPI Card | Cost of goods sold |
+| KPI – Profit Margin | KPI Card | Overall profitability % |
+| KPI – Total Discounts | KPI Card | Total discount value applied |
+| KPI – Units Sold | KPI Card | Volume metric across all segments |
+| Sales Trend | Line Chart | Month-over-month sales performance |
+| Gross Sales vs Discounts | Bar/Combo | Discount impact on gross revenue |
+| Profit by Product | Bar Chart | Profitability breakdown by product line |
+| Heat Map | Heat Map | Sales performance by segment × country |
+| **Financial Performance Dashboard** | **Dashboard** | **Combined interactive view** |
 
 ---
 
 ## Key Metrics Tracked
 
-- ESG scores by country (Environmental, Social, Governance pillars)
-- Geographic ESG performance mapping
-- Country-to-country benchmarking
-- ESG trends over time
-- Workforce/HR dimension blended from HR dataset
+- Net Sales, Gross Sales, COGS, Profit Margin
+- Units Sold across segments and countries
+- Month-over-month sales trends
+- Discount band impact on revenue
+- Product-level profitability
 
 ---
 
-## Data Sources
+## Dataset Fields
 
-| File | Purpose |
-|---|---|
-| `ESGData_Tableau.csv` | Primary ESG scoring data by country and period |
-| `HRDataset_v14.csv` | Blended HR data for social/workforce governance metrics |
-
-> This project uses **Tableau's blended data source** feature, combining two separate CSV files on a common dimension.
+| Field | Type | Description |
+|---|---|---|
+| Segment | String | Customer segment (e.g. Government, Enterprise) |
+| Country | String | 5 countries |
+| Product | String | 6 product lines |
+| Discount Band | String | None / Low / Medium / High |
+| Units Sold | Number | Volume per transaction |
+| Manufacturing Price | Number | Unit cost |
+| Sale Price | Number | Unit selling price |
+| Gross Sales | Number | Revenue before discounts |
+| Discounts | Number | Discount amount |
+| Sales | Number | Net revenue |
+| COGS | Number | Total cost of goods sold |
+| Profit | Number | Net profit |
+| Date / Month / Year | Date | Time dimensions |
 
 ---
 
 ## How to Open
 
-1. Download `Data_Governance_ESG_Dashboard_Prerna-Rai.twb`
+1. Download `Unified_Financial_project1_.twb`
 2. Open in Tableau Desktop
-3. Reconnect both data sources:
-   - `ESGData_Tableau.csv`
-   - `HRDataset_v14.csv`
+3. When prompted, reconnect the data source to your local copy of `financial_data_clean.csv`
 
 ---
 
 ## Skills Demonstrated
 
-- Blended data sources across two CSVs
-- Geographic map visualisation with ESG scoring
-- KPI summary tables for governance reporting
-- Trend analysis over time with line charts
-- Cross-country benchmarking with bar charts
-- ESG domain knowledge applied to real-world data
+- KPI card design with custom formatting
+- Heat map for cross-dimensional analysis
+- Trend line charts with date functions
+- Discount impact visualisation
+- Multi-sheet dashboard layout with filters
